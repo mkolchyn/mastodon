@@ -40,8 +40,8 @@
 
 # Ignore postgres + redis + elasticsearch volume optionally created by docker-compose
 /postgres
-/postgres14
-/redis
+#/postgres14
+#/redis
 /elasticsearch
 
 # Ignore Apple files
