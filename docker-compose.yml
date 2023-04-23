@@ -133,4 +133,4 @@ services:
 networks:
   external_network:
   internal_network:
-    # internal: true
+    internal: true
