@@ -17,7 +17,7 @@ server {
   listen 80;
   listen [::]:80;
   server_name kolchin.com;
-  root /home/kolchin/wgforge/mastodon_hw/git/mastodon/public;
+  root /home/vagrant/mastodon/public;
   location /.well-known/acme-challenge/ { allow all; }
   location / { return 301 https://$host$request_uri; }
 }
@@ -34,14 +34,14 @@ server {
   ssl_session_tickets off;
 
   # Uncomment these lines once you acquire a certificate:
-  ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+  ssl_certificate     /etc/ssl/fullchain.pem;
+  ssl_certificate_key /etc/ssl/privkey.pem;
 
   keepalive_timeout    70;
   sendfile             on;
   client_max_body_size 99m;
 
-  root /home/kolchin/wgforge/mastodon_hw/git/mastodon/public;
+  root /home/vagrant/mastodon/public;
 
   gzip on;
   gzip_disable "msie6";
